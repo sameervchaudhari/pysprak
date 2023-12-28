@@ -75,7 +75,11 @@
             poetry install --no-root  : We are not trying to create package here
      # Install brew
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-  
+   # Set Path for brew
+   echo $SHELL
+   vim ~/.zshrc
+   export PATH="/opt/homebrew/bin:$PATH"
+
 
 
 
