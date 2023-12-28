@@ -50,6 +50,15 @@
        Reference /usr/local/opt/openjdk for the active installation.
        sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 
+       # OR
+       sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+      
+       this link documentation is part of brew installation.
+
+
+
+
+
        Benefits of Using Symlinks:
 
         Non-Destructive: They don't modify the original files, ensuring a safe and organized approach.
