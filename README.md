@@ -41,6 +41,58 @@
           rm ~/.ssh/id_rsa.pub
 
 
+# Here are the detailed steps to run a Python big data application using PySpark on two Mac laptops as a cluster:
+    # Install Java: PySpark requires Java. Install it on both laptops if it's not already installed.
+                    Ensure both Macs have Java 8 or later installed
+       brew install java
+
+       /usr/local/opt/openjdk: This is the primary installation directory for OpenJDK when installed using Homebrew. It contains the essential files and executables        for running Java.
+       Reference /usr/local/opt/openjdk for the active installation.
+       sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+
+       Benefits of Using Symlinks:
+
+        Non-Destructive: They don't modify the original files, ensuring a safe and organized approach.
+        System-Wide Visibility: Applications and tools that rely on the standard JDK path will now recognize OpenJDK.
+        No Conflicts: It avoids potential conflicts with other Java versions or configurations.
+
+       After running the command, verify by:
+
+        Checking Symlink: Use ls -l /Library/Java/JavaVirtualMachines/openjdk.jdk to confirm the symlink's existence.
+        Checking Java Version: Run java -version to see if the system correctly recognizes OpenJDK.
+     # Install Pyspark
+         # Create virtual env using poetry
+           poetry init
+           poetry shell
+                   sameerchaudhari@Sameers-MBP dev % poetry shell
+                    The currently activated Python version 3.12.1 is not supported by the project (3.9.6).
+                    Trying to find and use a compatible version. 
+                    Using python3 (3.9.6)
+                    Creating virtualenv pyspark-bigdata-PP00zFBB-py3.9 in /Users/sameerchaudhari/Library/Caches/pypoetry/virtualenvs
+                    Spawning shell within /Users/sameerchaudhari/Library/Caches/pypoetry/virtualenvs/pyspark-bigdata-PP00zFBB-py3.9
+                    sameerchaudhari@Sameers-MBP dev % emulate bash -c '. /Users/sameerchaudhari/Library/Caches/pypoetry/virtualen
+                    vs/pyspark-bigdata-PP00zFBB-py3.9/bin/activate'
+            poetry install --no-root  : We are not trying to create package here
+     # Install brew
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  
+
+
+
+
+
+
+
+
+    #  Install Spark and PySpark: Download and install Spark on both machines. Ensure PySpark is installed using 
+       pip install pyspark.
+
+
+
+
+
+
+
 
 
          
