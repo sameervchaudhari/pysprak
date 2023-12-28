@@ -89,16 +89,15 @@
    vim ~/.zshrc
    export PATH="/opt/homebrew/bin:$PATH"
 
+#  To INSTALL pyspark system wide
+     # brew install pyspark
+     #echo $SPARK_HOME
+
+     # use the java_home command to find the installation path of JDK 21:
+     /usr/libexec/java_home -v 21
 
 
 
-
-
-
-
-
-    #  Install Spark and PySpark: Download and install Spark on both machines. Ensure PySpark is installed using 
-       pip install pyspark.
 
 
 
