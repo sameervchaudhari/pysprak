@@ -55,10 +55,6 @@
       
        this link documentation is part of brew installation.
 
-
-
-
-
        Benefits of Using Symlinks:
 
         Non-Destructive: They don't modify the original files, ensuring a safe and organized approach.
@@ -95,6 +91,12 @@
 
      # use the java_home command to find the installation path of JDK 21:
      /usr/libexec/java_home -v 21
+
+ # To avoid Python3.12 version used by Spark orker node
+    sudo ln -sf /opt/homebrew/bin/python3.11 /usr/local/bin/python3
+    spark-submit --master spark://Sameers-MBP:7077 --num-executors 4 ./main.py
+    ./start-worker.sh spark://Sameers-MBP:7077
+    ./start-master.sh
 
 
 
